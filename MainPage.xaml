@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="ApkUpdate.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ApkUpdate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Margin="10 0 0 0" x:Name="VersionTitle" Text="Текущая версия: " VerticalAlignment="Center" />
+
+        <Border Width="150" BorderBrush="Black" Grid.Row="1" BorderThickness="1" Margin="10 10 10 10" HorizontalAlignment="Left">
+            <Image Source="available-updates.png" x:Name="download_icon" AllowDrop="True" DragOver="Grid_DragOver" Drop="Download_Drop" VerticalAlignment="Stretch" />
+        </Border>
+    </Grid>
+</Page>
